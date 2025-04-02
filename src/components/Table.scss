@@ -22,8 +22,16 @@
     font-weight: 560;
     border: 3px solid #ffffff;
 
+    .table__yestarday-persentage {
+      color: #216721;
+    }
+
     &.is-less {
       background-color: #fda5a5;
+
+      .table__yestarday-persentage {
+        color: #ad0000;
+      }
     }
 
     &.is-more {
