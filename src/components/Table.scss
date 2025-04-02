@@ -1,0 +1,52 @@
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  &__table {
+    border-collapse: collapse;
+    background-color: #f5f5f5;
+  }
+
+  &__row {
+    cursor: pointer;
+  }
+
+  &__cell {
+    padding: 10px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 560;
+    border: 3px solid #ffffff;
+
+    &.is-less {
+      background-color: #fda5a5;
+    }
+
+    &.is-more {
+      background-color: #9be39b;
+    }
+  }
+
+  &__cell--current {
+    background-color: rgb(182 219 245);
+  }
+
+  &__cell:not(:first-child) {
+    text-align: right;
+  }
+
+  &__row--header .table__cell {
+    text-align: center;
+  }
+
+  &__yestarday {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
