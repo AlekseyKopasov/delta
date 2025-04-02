@@ -117,7 +117,7 @@ const Table: React.FC<TableProps> = ({ items }) => {
                 onClick={() => handleRowClick(item.id)}
               >
                 <td className='table__cell'>{item.indicator}</td>
-                <td className='table__cell table__cell--current'>{item.currentDay}</td>
+                <td className='table__cell table__cell--current'>{item.currentDay.toLocaleString('ru-RU')}</td>
                 <td className={
                   `table__cell ${item.isYesterdayLess ?
                     'is-less' : ''}
@@ -125,7 +125,7 @@ const Table: React.FC<TableProps> = ({ items }) => {
                     'is-more' : ''}`}>
                   <div className='table__yestarday'>
                     <span className='table__yestarday-sum'>
-                      {item.yesterday}
+                      {item.yesterday.toLocaleString('ru-RU')}
                     </span>
                     <span className='table__yestarday-persentage'>
                       {`${item.percentage} %`}
@@ -138,7 +138,7 @@ const Table: React.FC<TableProps> = ({ items }) => {
                 ${item.isTotalMore ?
                     'is-more' : ''}`}
                 >
-                  {item.dayWeek}
+                  {item.dayWeek.toLocaleString('ru-RU')}
                 </td>
               </tr>
             </React.Fragment>
